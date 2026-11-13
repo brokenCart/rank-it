@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rank It</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="start">
+    <header class="hero">
+      <h1 class="logo">Rank It!</h1>
+      <p class="tagline">Draw it. Rank it. Win it.</p>
+    </header>
+
+    <section class="choices" aria-label="Create or join a room">
+      <!-- Create a room -->
+      <form class="card card--create" id="create-room">
+        <span class="sticker" aria-hidden="true">NEW!</span>
+        <h2 class="card__title">Create a Room</h2>
+        <p class="card__text">Host a new game and share the room code with your friends. Everyone draws, everyone ranks, and the best doodle wins!</p>
+
+        <label class="field">
+          <span class="field__label">Your artist name</span>
+          <input class="field__input" type="text" name="name" placeholder="e.g. Picasso Jr." maxlength="20" required>
+        </label>
+
+        <button class="btn btn--yellow" type="submit">Start Drawing</button>
+      </form>
+
+      <div class="divider" aria-hidden="true"><span>OR</span></div>
+
+      <!-- Join a room -->
+      <form class="card card--join" id="join-room">
+        <h2 class="card__title">Join a Room</h2>
+        <p class="card__text">Got a room code from a friend? Pop it in, grab your pencil, and get ready to show off your art.</p>
+
+        <label class="field">
+          <span class="field__label">Your artist name</span>
+          <input class="field__input" type="text" name="name" placeholder="e.g. Doodle Queen" maxlength="20" required>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Room code</span>
+          <input class="field__input field__input--code" type="text" name="code" placeholder="JQ7B"
+                 maxlength="4" pattern="[A-Za-z0-9]{4}" autocomplete="off" spellcheck="false" required>
+        </label>
+
+        <button class="btn btn--pink" type="submit">Join the Game</button>
+      </form>
+    </section>
+
+    <section class="how" aria-labelledby="how-title">
+      <h2 class="how__title" id="how-title">How to Play</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">1</span>
+          <h3 class="step__title">Gather</h3>
+          <p class="step__text">Create a room and invite your friends with the code.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">2</span>
+          <h3 class="step__title">Draw</h3>
+          <p class="step__text">Everyone gets the same prompt and draws their best masterpiece.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">3</span>
+          <h3 class="step__title">Rank</h3>
+          <p class="step__text">Rank everyone else's drawings from best to worst. No voting for yourself!</p>
+        </li>
+        <li class="step">
+          <span class="step__num">4</span>
+          <h3 class="step__title">Win</h3>
+          <p class="step__text">The rankings are added up and the top artist is crowned the winner.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
